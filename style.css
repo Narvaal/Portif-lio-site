@@ -1,0 +1,153 @@
+/* ========== BASE STYLES ========== */
+body {
+  background-color: #fefffe;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+hr {
+  background-color: #3d3d3c !important;
+  border: none !important;
+  height: 1px !important;
+  opacity: 100% !important;
+}
+
+main {
+  padding-bottom: 200px;
+}
+
+.typing-word {
+  color: #3d3d3c;
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.block {
+  margin: 20px auto 0;
+  padding: 20px;
+  text-align: center;
+  width: 50%;
+}
+
+.big-text {
+  color: #3d3d3c;
+  text-decoration: none;
+}
+
+.small-text {
+  color: #b4b4b4;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+
+/* ============ LOAD EFFECTS ============ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+img {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+img.loaded {
+  opacity: 1;
+}
+
+.version {
+  border-color: green !important;
+  color: green;
+  margin-left: 2px;
+}
+
+/* ========== SIDE NAVIGATION ========== */
+.sidenav {
+  background-color: #fefffe;
+  border-right: 1px solid #3d3d3c;
+  display: none; /* Oculta em telas pequenas por padrão */
+  height: 100vh;
+  left: 0;
+  padding: 20px 10px;
+  position: fixed;
+  top: 0;
+  width: 240px;
+  z-index: 1000;
+}
+
+.sidenav a {
+  color: #3d3d3c;
+  display: block;
+  font-size: 20px;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+.sidenav a:hover {
+  color: #000;
+}
+
+/* ========== TOP NAVIGATION (Mobile) ========== */
+.top-nav {
+  backdrop-filter: blur(1px); /* applies blur to what's behind */
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  -webkit-backdrop-filter: blur(8px); /* for Safari */
+}
+
+.nav-item {
+  color: #3d3d3c;
+  display: block;
+  font-size: 20px;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  background-color: #3d3d3c;
+  color:white;
+}
+
+/* ========== MEDIA QUERIES ========== */
+@media (min-width: 768px) {
+  .sidenav {
+    display: block; /* Mostra o menu lateral */
+  }
+
+  .top-nav {
+    visibility: hidden; /* Oculta o topo em telas maiores */
+  }
+
+  .main-content {
+    margin-left: 208px;
+    padding: 2rem;
+    padding-right: 0px;
+  }
+
+  .image-separtor {
+    margin: 0px;
+  }
+}

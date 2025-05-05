@@ -10,6 +10,22 @@ document.addEventListener('DOMContentLoaded', () => {
       clockElement.innerHTML = now.toLocaleDateString(undefined, options);
     }
 
+    document.querySelectorAll(".real-image").forEach((img) => {
+      const wrapper = img.closest(".image-wrapper");
+      const skeleton = wrapper.querySelector(".skeleton-loader");
+
+      const showImage = () => {
+        img.classList.add("loaded");
+        if (skeleton) skeleton.style.display = "none";
+      };
+
+      if (img.complete) {
+        showImage();
+      } else {
+        img.addEventListener("load", showImage);
+      }
+    });
+    
     document.querySelectorAll(".fade-in").forEach(el => {
       el.classList.add("visible");
     });

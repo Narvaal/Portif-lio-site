@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
           clearInterval(interval);
           fadeInWord(index + 1);
         }
-      }, 10);
+      }, 5);
     };
     fadeInWord(0);
   });

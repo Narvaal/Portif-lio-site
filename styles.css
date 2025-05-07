@@ -21,9 +21,6 @@ hr {
     opacity: 100% !important;
 }
 
-main {
-    padding-bottom: 200px;
-}
 
 .typing-word {
     color: #3d3d3c;
@@ -33,10 +30,10 @@ main {
 }
 
 .block {
-    margin: 20px auto 0;
-    padding: 20px;
+    padding: 30px;
     text-align: center;
-    width: 50%;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .big-text {
@@ -201,4 +198,10 @@ img.loaded {
     .image-separtor {
         margin: 0px;
     }
+
+    .block {
+        width: 50%;
+        margin:auto;
+    }
+
 }
